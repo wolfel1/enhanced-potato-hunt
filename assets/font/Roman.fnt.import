@@ -1,0 +1,16 @@
+[remap]
+
+importer="font_data_bmfont"
+type="FontFile"
+uid="uid://dq6rgglrx8svc"
+path="res://.godot/imported/Roman.fnt-fe1b23e81b7ecba098dd3cc88d7a588e.fontdata"
+
+[deps]
+
+source_file="res://assets/font/Roman.fnt"
+dest_files=["res://.godot/imported/Roman.fnt-fe1b23e81b7ecba098dd3cc88d7a588e.fontdata"]
+
+[params]
+
+fallbacks=[]
+compress=true

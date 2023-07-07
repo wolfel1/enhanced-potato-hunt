@@ -1,0 +1,44 @@
+[gd_scene load_steps=8 format=3 uid="uid://b2q23wdewms4i"]
+
+[ext_resource type="Texture2D" uid="uid://bwva7mrw3d68c" path="res://assets/field.jpg" id="1_1f6pj"]
+[ext_resource type="Script" path="res://Main.gd" id="1_b6b1r"]
+[ext_resource type="PackedScene" uid="uid://dg1u3mmg7n721" path="res://Plant.tscn" id="2_kyfu6"]
+[ext_resource type="PackedScene" uid="uid://bt3fimgkx3c2k" path="res://Player.tscn" id="2_yxeos"]
+[ext_resource type="PackedScene" uid="uid://bi8xxwcq3kobu" path="res://HUD.tscn" id="5_lhfbn"]
+[ext_resource type="PackedScene" uid="uid://rrau0lnn38bg" path="res://MainMenu.tscn" id="6_kvu47"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qe0gn"]
+size = Vector2(664, 698)
+
+[node name="Main" type="Node"]
+script = ExtResource("1_b6b1r")
+plant_scene = ExtResource("2_kyfu6")
+
+[node name="LevelArea" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_1f6pj")
+
+[node name="Player" parent="." instance=ExtResource("2_yxeos")]
+
+[node name="StartPosition" type="Marker2D" parent="."]
+position = Vector2(504, 424)
+
+[node name="Acre" type="Area2D" parent="."]
+position = Vector2(720, 720)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Acre"]
+position = Vector2(332, 339)
+shape = SubResource("RectangleShape2D_qe0gn")
+disabled = true
+
+[node name="HUD" parent="." instance=ExtResource("5_lhfbn")]
+
+[node name="PlantSpawnTimer" type="Timer" parent="."]
+wait_time = 2.5
+
+[node name="MainMenu" parent="." instance=ExtResource("6_kvu47")]
+
+[connection signal="collected" from="Player" to="." method="_on_plant_collected"]
+[connection signal="timeout" from="PlantSpawnTimer" to="." method="_on_plant_spawn_timer_timeout"]
+[connection signal="start_game" from="MainMenu" to="." method="new_game"]

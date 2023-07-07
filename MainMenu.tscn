@@ -1,0 +1,82 @@
+[gd_scene load_steps=2 format=3 uid="uid://rrau0lnn38bg"]
+
+[ext_resource type="Script" path="res://MainMenu.gd" id="1_fbrxt"]
+
+[node name="MainMenu" type="CanvasLayer"]
+script = ExtResource("1_fbrxt")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0196078, 0.0196078, 0.0196078, 0.74902)
+
+[node name="InstructionText" type="Label" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -219.5
+offset_top = -150.0
+offset_right = 219.5
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 52
+text = "You have to harvest all potatoes and get the best output!"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="StartButton" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -79.0
+offset_top = -80.0
+offset_right = 79.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 64
+text = "Start"
+
+[node name="InstructionsButton" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -154.0
+offset_top = 24.0
+offset_right = 154.0
+offset_bottom = 104.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 52
+text = "Instructions"
+
+[node name="BackButton" type="Button" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = -104.0
+offset_right = 146.0
+offset_bottom = -32.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 46
+text = "Back"
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="InstructionsButton" to="." method="_on_instructions_button_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
