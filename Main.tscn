@@ -39,6 +39,10 @@ wait_time = 2.5
 
 [node name="MainMenu" parent="." instance=ExtResource("6_kvu47")]
 
+[connection signal="pause" from="." to="Player" method="_on_pause"]
+[connection signal="pause" from="." to="HUD" method="_on_pause"]
 [connection signal="collected" from="Player" to="." method="_on_plant_collected"]
+[connection signal="continued" from="HUD" to="." method="_on_continued"]
+[connection signal="continued" from="HUD" to="Player" method="_on_hud_continued"]
 [connection signal="timeout" from="PlantSpawnTimer" to="." method="_on_plant_spawn_timer_timeout"]
 [connection signal="start_game" from="MainMenu" to="." method="new_game"]

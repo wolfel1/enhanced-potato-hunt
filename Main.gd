@@ -1,5 +1,7 @@
 extends Node
 
+signal pause
+
 @export var plant_scene: PackedScene
 var potato_count : int
 var start_time : int
@@ -38,10 +40,16 @@ func spawn_plant():
 	plant_count += 1
 	
 
-func _process(delta):
+func _process(_delta):
 	if is_started:
 		var time = Time.get_ticks_msec() - start_time
 		$HUD.update_time(time)
+		
+func _input(event):
+	if event.is_action_pressed("pause"):
+		is_started = false
+		$PlantSpawnTimer.stop()
+		pause.emit()
 	
 	
 func _on_plant_collected(count):
@@ -52,3 +60,8 @@ func _on_plant_collected(count):
 func _on_plant_spawn_timer_timeout():
 	if plant_count < 10:
 		spawn_plant()
+
+
+func _on_continued():
+	is_started = true
+	$PlantSpawnTimer.start()

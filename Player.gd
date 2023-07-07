@@ -1,6 +1,6 @@
 extends Area2D
 
-signal collected
+signal collected(count)
 
 @export var speed = 400
 var screen_size
@@ -49,8 +49,11 @@ func move_player(delta):
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
 		$AnimatedSprite2D.play()
+		if !$AnimatedSprite2D/Footsteps.is_playing():
+			$AnimatedSprite2D/Footsteps.play()
 	else:
 		$AnimatedSprite2D.stop()
+		$AnimatedSprite2D/Footsteps.stop()
 		
 	position += velocity * delta
 	position.x = clamp(position.x, size.x/2, level_size.x - size.x/2)
@@ -71,3 +74,17 @@ func move_player(delta):
 func _on_body_entered(body):
 	var potato_count = body.harvest()
 	collected.emit(potato_count)
+
+
+func _on_pause():
+	is_started = false
+
+
+func _on_hud_continued():
+	is_started = true
+
+
+
+
+func _on_animated_sprite_2d_animation_changed():
+	pass

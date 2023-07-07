@@ -1,5 +1,10 @@
 extends CanvasLayer
 
+signal continued
+
+func _ready():
+	$PauseBackground.hide()
+	
 func update_potato_count(potato_count):
 	$PotatoLabel.text = str(potato_count)
 
@@ -10,3 +15,12 @@ func update_time(time: int):
 	var milliseconds = time % 1000
 	$TimeLabel.text = "%02d:%02d:%03d" % [minutes, seconds, milliseconds]
 	
+
+
+func _on_pause():
+	$PauseBackground.show()
+
+
+func _on_continue_button_pressed():
+	continued.emit()
+	$PauseBackground.hide()

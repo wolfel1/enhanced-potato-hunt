@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://rrau0lnn38bg"]
+[gd_scene load_steps=3 format=3 uid="uid://rrau0lnn38bg"]
 
 [ext_resource type="Script" path="res://MainMenu.gd" id="1_fbrxt"]
+[ext_resource type="Texture2D" uid="uid://f6wmrfj2dacq" path="res://assets/ui/keySmall.png" id="2_y6ypn"]
 
 [node name="MainMenu" type="CanvasLayer"]
 script = ExtResource("1_fbrxt")
@@ -13,20 +14,192 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.0196078, 0.0196078, 0.0196078, 0.74902)
 
-[node name="InstructionText" type="Label" parent="."]
+[node name="Instructions" type="CanvasGroup" parent="."]
 visible = false
+
+[node name="BackButton" type="Button" parent="Instructions"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = 616.0
+offset_right = 146.0
+offset_bottom = 688.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 46
+text = "Back"
+
+[node name="WKey" type="Sprite2D" parent="Instructions"]
+position = Vector2(497, 414)
+scale = Vector2(0.51817, 0.439999)
+texture = ExtResource("2_y6ypn")
+
+[node name="W" type="Label" parent="Instructions/WKey"]
+offset_left = -13.5091
+offset_top = -29.5455
+offset_right = 12.4909
+offset_bottom = 12.4545
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+text = "W"
+horizontal_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="AKey" type="Sprite2D" parent="Instructions"]
+position = Vector2(461.909, 446)
+scale = Vector2(0.51817, 0.439999)
+texture = ExtResource("2_y6ypn")
+
+[node name="A" type="Label" parent="Instructions/AKey"]
+offset_left = -9.47275
+offset_top = -29.5455
+offset_right = 9.52725
+offset_bottom = 12.4545
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+text = "A"
+horizontal_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="SKey" type="Sprite2D" parent="Instructions"]
+position = Vector2(497, 446)
+scale = Vector2(0.51817, 0.439999)
+texture = ExtResource("2_y6ypn")
+
+[node name="S" type="Label" parent="Instructions/SKey"]
+offset_left = -9.47275
+offset_top = -29.5455
+offset_right = 9.52725
+offset_bottom = 12.4545
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+text = "S"
+horizontal_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="DKey" type="Sprite2D" parent="Instructions"]
+position = Vector2(532, 446)
+scale = Vector2(0.51817, 0.439999)
+texture = ExtResource("2_y6ypn")
+
+[node name="D" type="Label" parent="Instructions/DKey"]
+offset_left = -9.47275
+offset_top = -29.5455
+offset_right = 9.52725
+offset_bottom = 12.4545
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+text = "D"
+horizontal_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="UpArrowKey" type="Sprite2D" parent="Instructions"]
+position = Vector2(677, 414)
+scale = Vector2(0.51817, 0.439999)
+texture = ExtResource("2_y6ypn")
+
+[node name="Up" type="Label" parent="Instructions/UpArrowKey"]
+offset_left = -13.5091
+offset_top = -29.5455
+offset_right = 12.4909
+offset_bottom = 12.4545
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+text = "↑"
+horizontal_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="LeftArrowKey" type="Sprite2D" parent="Instructions"]
+position = Vector2(641.909, 446)
+scale = Vector2(0.51817, 0.439999)
+texture = ExtResource("2_y6ypn")
+
+[node name="Left" type="Label" parent="Instructions/LeftArrowKey"]
+offset_left = -13.3325
+offset_top = -34.0909
+offset_right = 10.6675
+offset_bottom = 7.90906
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+text = "←"
+horizontal_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="DownArrowKey" type="Sprite2D" parent="Instructions"]
+position = Vector2(677, 446)
+scale = Vector2(0.51817, 0.439999)
+texture = ExtResource("2_y6ypn")
+
+[node name="Down" type="Label" parent="Instructions/DownArrowKey"]
+offset_left = -9.64951
+offset_top = -29.5455
+offset_right = 9.35049
+offset_bottom = 12.4545
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+text = "↓"
+horizontal_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="RightArrowKey" type="Sprite2D" parent="Instructions"]
+position = Vector2(712, 446)
+scale = Vector2(0.51817, 0.439999)
+texture = ExtResource("2_y6ypn")
+
+[node name="Right" type="Label" parent="Instructions/RightArrowKey"]
+offset_left = -11.5793
+offset_top = -34.0909
+offset_right = 12.4207
+offset_bottom = 7.90906
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+text = "→"
+horizontal_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="MoveInstructions" type="Label" parent="Instructions"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -219.5
-offset_top = -150.0
-offset_right = 219.5
-offset_bottom = 150.0
+offset_left = 216.0
+offset_top = 408.0
+offset_right = 428.0
+offset_bottom = 469.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 52
+theme_override_font_sizes/font_size = 42
+text = "Move with"
+
+[node name="MoveInstructions2" type="Label" parent="Instructions"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 568.0
+offset_top = 408.0
+offset_right = 612.0
+offset_bottom = 469.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 42
+text = "or"
+
+[node name="InstructionText" type="Label" parent="Instructions"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 256.0
+offset_top = 104.0
+offset_right = 695.0
+offset_bottom = 404.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 48
 text = "You have to harvest all potatoes and get the best output!"
 horizontal_alignment = 1
 autowrap_mode = 2
@@ -65,18 +238,6 @@ size_flags_vertical = 8
 theme_override_font_sizes/font_size = 52
 text = "Instructions"
 
-[node name="BackButton" type="Button" parent="."]
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 32.0
-offset_top = -104.0
-offset_right = 146.0
-offset_bottom = -32.0
-grow_vertical = 0
-theme_override_font_sizes/font_size = 46
-text = "Back"
-
+[connection signal="pressed" from="Instructions/BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="InstructionsButton" to="." method="_on_instructions_button_pressed"]
-[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

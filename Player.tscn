@@ -1,7 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://bt3fimgkx3c2k"]
+[gd_scene load_steps=18 format=3 uid="uid://bt3fimgkx3c2k"]
 
 [ext_resource type="Texture2D" uid="uid://irk3wo2mno24" path="res://assets/player/spritesheet.png" id="1_djcq7"]
 [ext_resource type="Script" path="res://Player.gd" id="1_kdoo8"]
+[ext_resource type="AudioStream" uid="uid://cc8l7kfggfgwj" path="res://assets/audio/footsteps_grass_1-6810.mp3" id="3_lm44o"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nk3p6"]
 atlas = ExtResource("1_djcq7")
@@ -59,7 +60,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle_back",
-"speed": 5.0
+"speed": 1.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -67,7 +68,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle_front",
-"speed": 5.0
+"speed": 1.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -75,7 +76,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle_left",
-"speed": 5.0
+"speed": 1.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -83,7 +84,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle_right",
-"speed": 5.0
+"speed": 1.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -94,7 +95,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk_back",
-"speed": 5.0
+"speed": 3.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -105,7 +106,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk_front",
-"speed": 5.0
+"speed": 3.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -116,7 +117,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk_left",
-"speed": 5.0
+"speed": 3.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -141,7 +142,10 @@ script = ExtResource("1_kdoo8")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_y81ut")
-animation = &"walk_front"
+animation = &"walk_right"
+
+[node name="Footsteps" type="AudioStreamPlayer2D" parent="AnimatedSprite2D"]
+stream = ExtResource("3_lm44o")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_6848s")
@@ -149,3 +153,4 @@ shape = SubResource("CapsuleShape2D_6848s")
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="animation_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_changed"]
