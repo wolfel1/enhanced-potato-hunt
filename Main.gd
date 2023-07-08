@@ -70,9 +70,11 @@ func _on_continued():
 	is_started = true
 	$PlantSpawnTimer.start()
 
-
 func _on_quit():
+	var time : String = $HUD/TimeLabel.text
+	$MainMenu.update_best_time(time, potato_count)
 	$MainMusic.stop()
 	$MainMenu.show()
 	$MainMusic.play()
 	
+

@@ -70,6 +70,22 @@ size_flags_vertical = 4
 theme_override_font_sizes/font_size = 64
 text = "Start"
 
+[node name="BestTimeLabel" type="Label" parent="StartScreen"]
+offset_left = 424.0
+offset_top = 160.0
+offset_right = 533.0
+offset_bottom = 194.0
+theme_override_font_sizes/font_size = 22
+text = "Best time:"
+
+[node name="BestScoreLabel" type="Label" parent="StartScreen"]
+offset_left = 352.0
+offset_top = 200.0
+offset_right = 601.0
+offset_bottom = 234.0
+theme_override_font_sizes/font_size = 22
+text = "0 Potatoes in 00:00:000"
+
 [node name="Instructions" type="CanvasGroup" parent="."]
 visible = false
 
