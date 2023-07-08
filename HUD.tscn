@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bi8xxwcq3kobu"]
+[gd_scene load_steps=4 format=3 uid="uid://bi8xxwcq3kobu"]
 
 [ext_resource type="Script" path="res://HUD.gd" id="1_1yp8u"]
 [ext_resource type="Texture2D" uid="uid://20l3hcfrkfxt" path="res://assets/potato.png" id="1_8ler4"]
+[ext_resource type="AudioStream" uid="uid://dopgor6quc0un" path="res://assets/audio/drop_003.ogg" id="3_ryrvi"]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_1yp8u")
@@ -72,4 +73,25 @@ scale = Vector2(0.560001, 0.560001)
 theme_override_font_sizes/font_size = 42
 text = "Continue"
 
+[node name="QuitButton" type="Button" parent="PauseBackground"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.511
+anchor_right = 0.5
+anchor_bottom = 0.511
+offset_left = -128.0
+offset_top = 64.08
+offset_right = 335.0
+offset_bottom = 130.08
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.560001, 0.560001)
+theme_override_font_sizes/font_size = 42
+text = "Stop farming and quit!"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="PauseBackground"]
+stream = ExtResource("3_ryrvi")
+
 [connection signal="pressed" from="PauseBackground/ContinueButton" to="." method="_on_continue_button_pressed"]
+[connection signal="pressed" from="PauseBackground/QuitButton" to="." method="_on_quit_button_pressed"]

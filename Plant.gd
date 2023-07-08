@@ -16,6 +16,7 @@ func _ready():
 func harvest():
 	var potato_count = randi_range(0, 6)
 	$Sprite2D.hide()
+	$AudioStreamPlayer.play()
 	$CollisionShape2D.set_deferred("disabled", true)
 	show_message(potato_count)
 	return potato_count

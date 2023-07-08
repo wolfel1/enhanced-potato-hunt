@@ -49,11 +49,8 @@ func move_player(delta):
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
 		$AnimatedSprite2D.play()
-		if !$AnimatedSprite2D/Footsteps.is_playing():
-			$AnimatedSprite2D/Footsteps.play()
 	else:
 		$AnimatedSprite2D.stop()
-		$AnimatedSprite2D/Footsteps.stop()
 		
 	position += velocity * delta
 	position.x = clamp(position.x, size.x/2, level_size.x - size.x/2)
@@ -83,8 +80,5 @@ func _on_pause():
 func _on_hud_continued():
 	is_started = true
 
-
-
-
-func _on_animated_sprite_2d_animation_changed():
-	pass
+func _on_animated_frame_changed():
+	$AnimatedSprite2D/Footstep.play()

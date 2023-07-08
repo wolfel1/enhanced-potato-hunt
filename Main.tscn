@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b2q23wdewms4i"]
+[gd_scene load_steps=9 format=3 uid="uid://b2q23wdewms4i"]
 
 [ext_resource type="Texture2D" uid="uid://bwva7mrw3d68c" path="res://assets/field.jpg" id="1_1f6pj"]
 [ext_resource type="Script" path="res://Main.gd" id="1_b6b1r"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bt3fimgkx3c2k" path="res://Player.tscn" id="2_yxeos"]
 [ext_resource type="PackedScene" uid="uid://bi8xxwcq3kobu" path="res://HUD.tscn" id="5_lhfbn"]
 [ext_resource type="PackedScene" uid="uid://rrau0lnn38bg" path="res://MainMenu.tscn" id="6_kvu47"]
+[ext_resource type="AudioStream" uid="uid://b88v5k5ryrnoc" path="res://assets/audio/Burning Trapezoid of Fire.mp3" id="7_j6t8s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qe0gn"]
 size = Vector2(664, 698)
@@ -35,14 +36,19 @@ disabled = true
 [node name="HUD" parent="." instance=ExtResource("5_lhfbn")]
 
 [node name="PlantSpawnTimer" type="Timer" parent="."]
-wait_time = 2.5
+wait_time = 2.0
 
 [node name="MainMenu" parent="." instance=ExtResource("6_kvu47")]
+
+[node name="MainMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_j6t8s")
+volume_db = -12.251
 
 [connection signal="pause" from="." to="Player" method="_on_pause"]
 [connection signal="pause" from="." to="HUD" method="_on_pause"]
 [connection signal="collected" from="Player" to="." method="_on_plant_collected"]
 [connection signal="continued" from="HUD" to="." method="_on_continued"]
 [connection signal="continued" from="HUD" to="Player" method="_on_hud_continued"]
+[connection signal="quit" from="HUD" to="." method="_on_quit"]
 [connection signal="timeout" from="PlantSpawnTimer" to="." method="_on_plant_spawn_timer_timeout"]
 [connection signal="start_game" from="MainMenu" to="." method="new_game"]

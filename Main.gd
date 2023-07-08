@@ -9,10 +9,13 @@ var plant_count : int = 0
 var is_started : bool = false
 
 func _ready():
+	$MainMusic.play()
 	$Player.init($StartPosition.position, $LevelArea)
 	
 func new_game():
+	$MainMusic.stop()
 	$MainMenu.hide()
+	$HUD.show()
 	get_tree().call_group("plants", "queue_free")
 	spawn_plants()
 	potato_count = 0
@@ -20,6 +23,7 @@ func new_game():
 	$Player.start()
 	start_time = Time.get_ticks_msec()
 	is_started = true
+	$MainMusic.play()
 
 func spawn_plants():
 	for i in range(0, 10):
@@ -65,3 +69,10 @@ func _on_plant_spawn_timer_timeout():
 func _on_continued():
 	is_started = true
 	$PlantSpawnTimer.start()
+
+
+func _on_quit():
+	$MainMusic.stop()
+	$MainMenu.show()
+	$MainMusic.play()
+	

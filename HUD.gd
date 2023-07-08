@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 signal continued
+signal quit
 
 func _ready():
 	$PauseBackground.hide()
@@ -22,5 +23,10 @@ func _on_pause():
 
 
 func _on_continue_button_pressed():
+	$PauseBackground/AudioStreamPlayer.play()
 	continued.emit()
 	$PauseBackground.hide()
+
+func _on_quit_button_pressed():
+	$PauseBackground.hide()
+	quit.emit()

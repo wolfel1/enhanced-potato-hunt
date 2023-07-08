@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://irk3wo2mno24" path="res://assets/player/spritesheet.png" id="1_djcq7"]
 [ext_resource type="Script" path="res://Player.gd" id="1_kdoo8"]
-[ext_resource type="AudioStream" uid="uid://cc8l7kfggfgwj" path="res://assets/audio/footsteps_grass_1-6810.mp3" id="3_lm44o"]
+[ext_resource type="AudioStream" uid="uid://btowp1b5oxl06" path="res://assets/audio/footstep_grass_004.ogg" id="3_otu6d"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nk3p6"]
 atlas = ExtResource("1_djcq7")
@@ -144,8 +144,10 @@ scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_y81ut")
 animation = &"walk_right"
 
-[node name="Footsteps" type="AudioStreamPlayer2D" parent="AnimatedSprite2D"]
-stream = ExtResource("3_lm44o")
+[node name="Footstep" type="AudioStreamPlayer2D" parent="AnimatedSprite2D"]
+stream = ExtResource("3_otu6d")
+volume_db = -11.243
+pitch_scale = 0.89
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_6848s")
@@ -153,4 +155,4 @@ shape = SubResource("CapsuleShape2D_6848s")
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
-[connection signal="animation_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_changed"]
+[connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_frame_changed"]
