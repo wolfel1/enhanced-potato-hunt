@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://rrau0lnn38bg"]
 
 [ext_resource type="Script" path="res://MainMenu.gd" id="1_fbrxt"]
-[ext_resource type="Texture2D" uid="uid://f6wmrfj2dacq" path="res://assets/ui/keySmall.png" id="2_y6ypn"]
+[ext_resource type="PackedScene" uid="uid://c52mjt7r5wfdo" path="res://Instructions.tscn" id="2_fk300"]
 [ext_resource type="AudioStream" uid="uid://dopgor6quc0un" path="res://assets/audio/drop_003.ogg" id="3_8j70s"]
 
 [node name="MainMenu" type="CanvasLayer"]
@@ -15,271 +15,153 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.0196078, 0.0196078, 0.0196078, 0.74902)
 
-[node name="StartScreen" type="CanvasGroup" parent="."]
-
-[node name="QuitButton" type="Button" parent="StartScreen"]
+[node name="BestTimeLabel" type="Label" parent="." groups=["Start"]]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 440.0
-offset_top = 464.0
-offset_right = 537.0
-offset_bottom = 530.0
+offset_left = -128.0
+offset_top = -264.0
+offset_right = 125.0
+offset_bottom = -230.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.68, 0.68)
-size_flags_horizontal = 4
-size_flags_vertical = 8
-theme_override_font_sizes/font_size = 42
-text = "Quit"
+theme_override_font_sizes/font_size = 22
+text = "Best time:"
+horizontal_alignment = 1
+metadata/_edit_group_ = true
 
-[node name="InstructionsButton" type="Button" parent="StartScreen"]
+[node name="BestScoreLabel" type="Label" parent="." groups=["Start"]]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 376.0
-offset_top = 392.0
-offset_right = 629.0
-offset_bottom = 458.0
+offset_left = -128.0
+offset_top = -224.0
+offset_right = 125.0
+offset_bottom = -190.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.8, 0.8)
-size_flags_horizontal = 4
-size_flags_vertical = 8
-theme_override_font_sizes/font_size = 42
-text = "Instructions"
+theme_override_font_sizes/font_size = 22
+text = "0 Potatoes in 00:00:000"
+horizontal_alignment = 1
+metadata/_edit_group_ = true
 
-[node name="StartButton" type="Button" parent="StartScreen"]
+[node name="StartButton" type="Button" parent="." groups=["Start"]]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 401.0
-offset_top = 280.0
-offset_right = 559.0
-offset_bottom = 376.0
+offset_left = -80.0
+offset_top = -120.0
+offset_right = 78.0
+offset_bottom = -24.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_font_sizes/font_size = 64
 text = "Start"
+metadata/_edit_group_ = true
 
-[node name="BestTimeLabel" type="Label" parent="StartScreen"]
-offset_left = 424.0
+[node name="InstructionsButton" type="Button" parent="." groups=["Start"]]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_right = 125.0
+offset_bottom = 66.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 42
+text = "Instructions"
+metadata/_edit_group_ = true
+
+[node name="CreditsButton" type="Button" parent="." groups=["Start"]]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -72.0
+offset_top = 72.0
+offset_right = 80.0
+offset_bottom = 138.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 42
+text = "Credits"
+metadata/_edit_group_ = true
+
+[node name="QuitButton" type="Button" parent="." groups=["Start"]]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
 offset_top = 160.0
-offset_right = 533.0
-offset_bottom = 194.0
-theme_override_font_sizes/font_size = 22
-text = "Best time:"
+offset_right = 49.0
+offset_bottom = 226.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 42
+text = "Quit"
+metadata/_edit_group_ = true
 
-[node name="BestScoreLabel" type="Label" parent="StartScreen"]
-offset_left = 352.0
-offset_top = 200.0
-offset_right = 601.0
-offset_bottom = 234.0
-theme_override_font_sizes/font_size = 22
-text = "0 Potatoes in 00:00:000"
-
-[node name="Instructions" type="CanvasGroup" parent="."]
+[node name="Instructions" parent="." instance=ExtResource("2_fk300")]
 visible = false
 
-[node name="BackButton" type="Button" parent="Instructions"]
+[node name="Credits" type="Label" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -152.0
+offset_top = -128.0
+offset_right = 169.0
+offset_bottom = 112.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "Sound and some art:
+Kenney
+
+Music:
+Kevin MacLeod"
+horizontal_alignment = 1
+
+[node name="BackButton" type="Button" parent="."]
+visible = false
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_left = 32.0
-offset_top = 616.0
+offset_top = -104.0
 offset_right = 146.0
-offset_bottom = 688.0
+offset_bottom = -32.0
 grow_vertical = 0
 theme_override_font_sizes/font_size = 46
 text = "Back"
 
-[node name="WKey" type="Sprite2D" parent="Instructions"]
-position = Vector2(497, 414)
-scale = Vector2(0.51817, 0.439999)
-texture = ExtResource("2_y6ypn")
-
-[node name="W" type="Label" parent="Instructions/WKey"]
-offset_left = -13.5091
-offset_top = -29.5455
-offset_right = 12.4909
-offset_bottom = 12.4545
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 28
-text = "W"
-horizontal_alignment = 1
-metadata/_edit_lock_ = true
-
-[node name="AKey" type="Sprite2D" parent="Instructions"]
-position = Vector2(461.909, 446)
-scale = Vector2(0.51817, 0.439999)
-texture = ExtResource("2_y6ypn")
-
-[node name="A" type="Label" parent="Instructions/AKey"]
-offset_left = -9.47275
-offset_top = -29.5455
-offset_right = 9.52725
-offset_bottom = 12.4545
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 28
-text = "A"
-horizontal_alignment = 1
-metadata/_edit_lock_ = true
-
-[node name="SKey" type="Sprite2D" parent="Instructions"]
-position = Vector2(497, 446)
-scale = Vector2(0.51817, 0.439999)
-texture = ExtResource("2_y6ypn")
-
-[node name="S" type="Label" parent="Instructions/SKey"]
-offset_left = -9.47275
-offset_top = -29.5455
-offset_right = 9.52725
-offset_bottom = 12.4545
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 28
-text = "S"
-horizontal_alignment = 1
-metadata/_edit_lock_ = true
-
-[node name="DKey" type="Sprite2D" parent="Instructions"]
-position = Vector2(532, 446)
-scale = Vector2(0.51817, 0.439999)
-texture = ExtResource("2_y6ypn")
-
-[node name="D" type="Label" parent="Instructions/DKey"]
-offset_left = -9.47275
-offset_top = -29.5455
-offset_right = 9.52725
-offset_bottom = 12.4545
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 28
-text = "D"
-horizontal_alignment = 1
-metadata/_edit_lock_ = true
-
-[node name="UpArrowKey" type="Sprite2D" parent="Instructions"]
-position = Vector2(677, 414)
-scale = Vector2(0.51817, 0.439999)
-texture = ExtResource("2_y6ypn")
-
-[node name="Up" type="Label" parent="Instructions/UpArrowKey"]
-offset_left = -13.5091
-offset_top = -29.5455
-offset_right = 12.4909
-offset_bottom = 12.4545
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 28
-text = "↑"
-horizontal_alignment = 1
-metadata/_edit_lock_ = true
-
-[node name="LeftArrowKey" type="Sprite2D" parent="Instructions"]
-position = Vector2(641.909, 446)
-scale = Vector2(0.51817, 0.439999)
-texture = ExtResource("2_y6ypn")
-
-[node name="Left" type="Label" parent="Instructions/LeftArrowKey"]
-offset_left = -13.3325
-offset_top = -34.0909
-offset_right = 10.6675
-offset_bottom = 7.90906
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 28
-text = "←"
-horizontal_alignment = 1
-metadata/_edit_lock_ = true
-
-[node name="DownArrowKey" type="Sprite2D" parent="Instructions"]
-position = Vector2(677, 446)
-scale = Vector2(0.51817, 0.439999)
-texture = ExtResource("2_y6ypn")
-
-[node name="Down" type="Label" parent="Instructions/DownArrowKey"]
-offset_left = -9.64951
-offset_top = -29.5455
-offset_right = 9.35049
-offset_bottom = 12.4545
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 28
-text = "↓"
-horizontal_alignment = 1
-metadata/_edit_lock_ = true
-
-[node name="RightArrowKey" type="Sprite2D" parent="Instructions"]
-position = Vector2(712, 446)
-scale = Vector2(0.51817, 0.439999)
-texture = ExtResource("2_y6ypn")
-
-[node name="Right" type="Label" parent="Instructions/RightArrowKey"]
-offset_left = -11.5793
-offset_top = -34.0909
-offset_right = 12.4207
-offset_bottom = 7.90906
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 28
-text = "→"
-horizontal_alignment = 1
-metadata/_edit_lock_ = true
-
-[node name="MoveInstructions" type="Label" parent="Instructions"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 216.0
-offset_top = 408.0
-offset_right = 428.0
-offset_bottom = 469.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 42
-text = "Move with"
-
-[node name="MoveInstructions2" type="Label" parent="Instructions"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 568.0
-offset_top = 408.0
-offset_right = 612.0
-offset_bottom = 469.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 42
-text = "or"
-
-[node name="InstructionText" type="Label" parent="Instructions"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 256.0
-offset_top = 104.0
-offset_right = 695.0
-offset_bottom = 404.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 48
-text = "You have to harvest all potatoes and get the best output!"
-horizontal_alignment = 1
-autowrap_mode = 2
-
 [node name="ButtonAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_8j70s")
 
-[connection signal="pressed" from="StartScreen/QuitButton" to="." method="_on_quit_button_pressed"]
-[connection signal="pressed" from="StartScreen/InstructionsButton" to="." method="_on_instructions_button_pressed"]
-[connection signal="pressed" from="StartScreen/StartButton" to="." method="_on_start_button_pressed"]
-[connection signal="pressed" from="Instructions/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="InstructionsButton" to="." method="_on_instructions_button_pressed"]
+[connection signal="pressed" from="CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

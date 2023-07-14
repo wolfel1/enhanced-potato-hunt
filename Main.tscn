@@ -23,7 +23,7 @@ texture = ExtResource("1_1f6pj")
 [node name="Player" parent="." instance=ExtResource("2_yxeos")]
 
 [node name="StartPosition" type="Marker2D" parent="."]
-position = Vector2(504, 424)
+position = Vector2(1040, 408)
 
 [node name="Acre" type="Area2D" parent="."]
 position = Vector2(720, 720)

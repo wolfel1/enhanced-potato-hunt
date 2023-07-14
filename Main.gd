@@ -73,6 +73,7 @@ func _on_continued():
 func _on_quit():
 	var time : String = $HUD/TimeLabel.text
 	$MainMenu.update_best_time(time, potato_count)
+	$Player.init($StartPosition.position, $LevelArea)
 	$MainMusic.stop()
 	$MainMenu.show()
 	$MainMusic.play()

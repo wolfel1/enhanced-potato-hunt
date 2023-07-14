@@ -9,11 +9,11 @@ var size
 var is_started : bool = false
 
 func _ready():
-	hide()
 	screen_size = get_viewport_rect().size
 	size = $CollisionShape2D.get_shape().get_rect().size
 	
 func init(pos, level):
+	hide()
 	position = pos
 	level_size = level.get_texture().get_size()
 	init_camera()

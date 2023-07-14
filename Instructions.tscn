@@ -1,0 +1,190 @@
+[gd_scene load_steps=2 format=3 uid="uid://c52mjt7r5wfdo"]
+
+[ext_resource type="Texture2D" uid="uid://f6wmrfj2dacq" path="res://assets/ui/keySmall.png" id="1_a6p3h"]
+
+[node name="Instructions" type="CanvasLayer"]
+
+[node name="InstructionText" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -232.0
+offset_top = -200.0
+offset_right = 204.0
+offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 48
+text = "You have to harvest all potatoes and get the best output!"
+horizontal_alignment = 1
+autowrap_mode = 2
+metadata/_edit_group_ = true
+
+[node name="MoveInstructions" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -264.0
+offset_top = 96.0
+offset_right = -52.0
+offset_bottom = 157.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 42
+text = "Move with"
+metadata/_edit_group_ = true
+
+[node name="WKey" type="Sprite2D" parent="."]
+position = Vector2(493, 462)
+scale = Vector2(0.51817, 0.439999)
+texture = ExtResource("1_a6p3h")
+metadata/_edit_group_ = true
+
+[node name="W" type="Label" parent="WKey"]
+offset_left = -13.5091
+offset_top = -29.5455
+offset_right = 12.4909
+offset_bottom = 12.4545
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+text = "W"
+horizontal_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="AKey" type="Sprite2D" parent="."]
+position = Vector2(457.909, 494)
+scale = Vector2(0.51817, 0.439999)
+texture = ExtResource("1_a6p3h")
+metadata/_edit_group_ = true
+
+[node name="A" type="Label" parent="AKey"]
+offset_left = -9.47275
+offset_top = -29.5455
+offset_right = 9.52725
+offset_bottom = 12.4545
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+text = "A"
+horizontal_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="SKey" type="Sprite2D" parent="."]
+position = Vector2(493, 494)
+scale = Vector2(0.51817, 0.439999)
+texture = ExtResource("1_a6p3h")
+metadata/_edit_group_ = true
+
+[node name="S" type="Label" parent="SKey"]
+offset_left = -9.47275
+offset_top = -29.5455
+offset_right = 9.52725
+offset_bottom = 12.4545
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+text = "S"
+horizontal_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="DKey" type="Sprite2D" parent="."]
+position = Vector2(528, 494)
+scale = Vector2(0.51817, 0.439999)
+texture = ExtResource("1_a6p3h")
+metadata/_edit_group_ = true
+
+[node name="D" type="Label" parent="DKey"]
+offset_left = -9.47275
+offset_top = -29.5455
+offset_right = 9.52725
+offset_bottom = 12.4545
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+text = "D"
+horizontal_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="MoveInstructions2" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.482
+anchor_top = 0.5
+anchor_right = 0.482
+anchor_bottom = 0.5
+offset_left = 89.28
+offset_top = 96.0
+offset_right = 133.28
+offset_bottom = 157.0
+theme_override_font_sizes/font_size = 42
+text = "or"
+metadata/_edit_group_ = true
+
+[node name="UpArrowKey" type="Sprite2D" parent="."]
+position = Vector2(669, 462)
+scale = Vector2(0.51817, 0.439999)
+texture = ExtResource("1_a6p3h")
+metadata/_edit_group_ = true
+
+[node name="Up" type="Label" parent="UpArrowKey"]
+offset_left = -13.5091
+offset_top = -29.5455
+offset_right = 12.4909
+offset_bottom = 12.4545
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+text = "↑"
+horizontal_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="LeftArrowKey" type="Sprite2D" parent="."]
+position = Vector2(633.909, 494)
+scale = Vector2(0.51817, 0.439999)
+texture = ExtResource("1_a6p3h")
+metadata/_edit_group_ = true
+
+[node name="Left" type="Label" parent="LeftArrowKey"]
+offset_left = -13.3325
+offset_top = -34.0909
+offset_right = 10.6675
+offset_bottom = 7.90906
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+text = "←"
+horizontal_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="DownArrowKey" type="Sprite2D" parent="."]
+position = Vector2(669, 494)
+scale = Vector2(0.51817, 0.439999)
+texture = ExtResource("1_a6p3h")
+metadata/_edit_group_ = true
+
+[node name="Down" type="Label" parent="DownArrowKey"]
+offset_left = -9.64951
+offset_top = -29.5455
+offset_right = 9.35049
+offset_bottom = 12.4545
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+text = "↓"
+horizontal_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="RightArrowKey" type="Sprite2D" parent="."]
+position = Vector2(704, 494)
+scale = Vector2(0.51817, 0.439999)
+texture = ExtResource("1_a6p3h")
+metadata/_edit_group_ = true
+
+[node name="Right" type="Label" parent="RightArrowKey"]
+offset_left = -11.5793
+offset_top = -34.0909
+offset_right = 12.4207
+offset_bottom = 7.90906
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+text = "→"
+horizontal_alignment = 1
+metadata/_edit_lock_ = true
