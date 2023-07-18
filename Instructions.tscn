@@ -39,73 +39,205 @@ theme_override_font_sizes/font_size = 42
 text = "Move with"
 metadata/_edit_group_ = true
 
-[node name="WKey" type="Sprite2D" parent="."]
-position = Vector2(493, 462)
-scale = Vector2(0.51817, 0.439999)
+[node name="WKey" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = 80.0
+offset_right = 84.0
+offset_bottom = 180.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.480002, 0.44)
 texture = ExtResource("1_a6p3h")
-metadata/_edit_group_ = true
 
 [node name="W" type="Label" parent="WKey"]
-offset_left = -13.5091
-offset_top = -29.5455
-offset_right = 12.4909
-offset_bottom = 12.4545
+offset_left = 35.4165
+offset_top = 18.1818
+offset_right = 61.4165
+offset_bottom = 60.1818
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 28
 text = "W"
 horizontal_alignment = 1
-metadata/_edit_lock_ = true
 
-[node name="AKey" type="Sprite2D" parent="."]
-position = Vector2(457.909, 494)
-scale = Vector2(0.51817, 0.439999)
+[node name="AKey" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = 112.0
+offset_right = 52.0
+offset_bottom = 212.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.480002, 0.44)
 texture = ExtResource("1_a6p3h")
-metadata/_edit_group_ = true
 
 [node name="A" type="Label" parent="AKey"]
-offset_left = -9.47275
-offset_top = -29.5455
-offset_right = 9.52725
-offset_bottom = 12.4545
+offset_left = 41.6664
+offset_top = 20.4545
+offset_right = 60.6664
+offset_bottom = 62.4545
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 28
 text = "A"
 horizontal_alignment = 1
-metadata/_edit_lock_ = true
 
-[node name="SKey" type="Sprite2D" parent="."]
-position = Vector2(493, 494)
-scale = Vector2(0.51817, 0.439999)
+[node name="DKey" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 16.0
+offset_top = 112.0
+offset_right = 116.0
+offset_bottom = 212.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.480002, 0.44)
 texture = ExtResource("1_a6p3h")
-metadata/_edit_group_ = true
-
-[node name="S" type="Label" parent="SKey"]
-offset_left = -9.47275
-offset_top = -29.5455
-offset_right = 9.52725
-offset_bottom = 12.4545
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 28
-text = "S"
-horizontal_alignment = 1
-metadata/_edit_lock_ = true
-
-[node name="DKey" type="Sprite2D" parent="."]
-position = Vector2(528, 494)
-scale = Vector2(0.51817, 0.439999)
-texture = ExtResource("1_a6p3h")
-metadata/_edit_group_ = true
 
 [node name="D" type="Label" parent="DKey"]
-offset_left = -9.47275
-offset_top = -29.5455
-offset_right = 9.52725
-offset_bottom = 12.4545
+offset_left = 37.4999
+offset_top = 20.4545
+offset_right = 58.4999
+offset_bottom = 62.4545
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 28
 text = "D"
 horizontal_alignment = 1
-metadata/_edit_lock_ = true
+
+[node name="SKey" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = 112.0
+offset_right = 84.0
+offset_bottom = 212.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.480002, 0.44)
+texture = ExtResource("1_a6p3h")
+
+[node name="S" type="Label" parent="SKey"]
+offset_left = 39.5831
+offset_top = 20.4545
+offset_right = 58.5831
+offset_bottom = 62.4545
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+text = "S"
+horizontal_alignment = 1
+
+[node name="UpKey" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 160.0
+offset_top = 80.0
+offset_right = 260.0
+offset_bottom = 180.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.480002, 0.44)
+texture = ExtResource("1_a6p3h")
+
+[node name="Up" type="Label" parent="UpKey"]
+offset_left = 37.4999
+offset_top = 18.1818
+offset_right = 63.4999
+offset_bottom = 60.1818
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+text = "↑"
+horizontal_alignment = 1
+
+[node name="LeftKey" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 128.0
+offset_top = 112.0
+offset_right = 228.0
+offset_bottom = 212.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.480002, 0.44)
+texture = ExtResource("1_a6p3h")
+
+[node name="Left" type="Label" parent="LeftKey"]
+offset_left = 41.6664
+offset_top = 16.0
+offset_right = 65.6664
+offset_bottom = 58.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+text = "←"
+horizontal_alignment = 1
+
+[node name="RightKey" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 192.0
+offset_top = 112.0
+offset_right = 292.0
+offset_bottom = 212.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.480002, 0.44)
+texture = ExtResource("1_a6p3h")
+
+[node name="Right" type="Label" parent="RightKey"]
+offset_left = 39.5831
+offset_top = 18.1818
+offset_right = 63.5831
+offset_bottom = 60.1818
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+text = "→"
+horizontal_alignment = 1
+
+[node name="DownKey" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 160.0
+offset_top = 112.0
+offset_right = 260.0
+offset_bottom = 212.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.480002, 0.44)
+texture = ExtResource("1_a6p3h")
+
+[node name="Down" type="Label" parent="DownKey"]
+offset_left = 41.6665
+offset_top = 18.1818
+offset_right = 60.6665
+offset_bottom = 60.1818
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+text = "↓"
+horizontal_alignment = 1
 
 [node name="MoveInstructions2" type="Label" parent="."]
 anchors_preset = -1
@@ -120,71 +252,3 @@ offset_bottom = 157.0
 theme_override_font_sizes/font_size = 42
 text = "or"
 metadata/_edit_group_ = true
-
-[node name="UpArrowKey" type="Sprite2D" parent="."]
-position = Vector2(669, 462)
-scale = Vector2(0.51817, 0.439999)
-texture = ExtResource("1_a6p3h")
-metadata/_edit_group_ = true
-
-[node name="Up" type="Label" parent="UpArrowKey"]
-offset_left = -13.5091
-offset_top = -29.5455
-offset_right = 12.4909
-offset_bottom = 12.4545
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 28
-text = "↑"
-horizontal_alignment = 1
-metadata/_edit_lock_ = true
-
-[node name="LeftArrowKey" type="Sprite2D" parent="."]
-position = Vector2(633.909, 494)
-scale = Vector2(0.51817, 0.439999)
-texture = ExtResource("1_a6p3h")
-metadata/_edit_group_ = true
-
-[node name="Left" type="Label" parent="LeftArrowKey"]
-offset_left = -13.3325
-offset_top = -34.0909
-offset_right = 10.6675
-offset_bottom = 7.90906
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 28
-text = "←"
-horizontal_alignment = 1
-metadata/_edit_lock_ = true
-
-[node name="DownArrowKey" type="Sprite2D" parent="."]
-position = Vector2(669, 494)
-scale = Vector2(0.51817, 0.439999)
-texture = ExtResource("1_a6p3h")
-metadata/_edit_group_ = true
-
-[node name="Down" type="Label" parent="DownArrowKey"]
-offset_left = -9.64951
-offset_top = -29.5455
-offset_right = 9.35049
-offset_bottom = 12.4545
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 28
-text = "↓"
-horizontal_alignment = 1
-metadata/_edit_lock_ = true
-
-[node name="RightArrowKey" type="Sprite2D" parent="."]
-position = Vector2(704, 494)
-scale = Vector2(0.51817, 0.439999)
-texture = ExtResource("1_a6p3h")
-metadata/_edit_group_ = true
-
-[node name="Right" type="Label" parent="RightArrowKey"]
-offset_left = -11.5793
-offset_top = -34.0909
-offset_right = 12.4207
-offset_bottom = 7.90906
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 28
-text = "→"
-horizontal_alignment = 1
-metadata/_edit_lock_ = true
