@@ -55,6 +55,7 @@ scale = Vector2(0.480002, 0.44)
 texture = ExtResource("1_a6p3h")
 
 [node name="W" type="Label" parent="WKey"]
+layout_mode = 0
 offset_left = 35.4165
 offset_top = 18.1818
 offset_right = 61.4165
@@ -80,6 +81,7 @@ scale = Vector2(0.480002, 0.44)
 texture = ExtResource("1_a6p3h")
 
 [node name="A" type="Label" parent="AKey"]
+layout_mode = 0
 offset_left = 41.6664
 offset_top = 20.4545
 offset_right = 60.6664
@@ -105,6 +107,7 @@ scale = Vector2(0.480002, 0.44)
 texture = ExtResource("1_a6p3h")
 
 [node name="D" type="Label" parent="DKey"]
+layout_mode = 0
 offset_left = 37.4999
 offset_top = 20.4545
 offset_right = 58.4999
@@ -130,6 +133,7 @@ scale = Vector2(0.480002, 0.44)
 texture = ExtResource("1_a6p3h")
 
 [node name="S" type="Label" parent="SKey"]
+layout_mode = 0
 offset_left = 39.5831
 offset_top = 20.4545
 offset_right = 58.5831
@@ -155,6 +159,7 @@ scale = Vector2(0.480002, 0.44)
 texture = ExtResource("1_a6p3h")
 
 [node name="Up" type="Label" parent="UpKey"]
+layout_mode = 0
 offset_left = 37.4999
 offset_top = 18.1818
 offset_right = 63.4999
@@ -180,6 +185,7 @@ scale = Vector2(0.480002, 0.44)
 texture = ExtResource("1_a6p3h")
 
 [node name="Left" type="Label" parent="LeftKey"]
+layout_mode = 0
 offset_left = 41.6664
 offset_top = 16.0
 offset_right = 65.6664
@@ -205,6 +211,7 @@ scale = Vector2(0.480002, 0.44)
 texture = ExtResource("1_a6p3h")
 
 [node name="Right" type="Label" parent="RightKey"]
+layout_mode = 0
 offset_left = 39.5831
 offset_top = 18.1818
 offset_right = 63.5831
@@ -230,6 +237,7 @@ scale = Vector2(0.480002, 0.44)
 texture = ExtResource("1_a6p3h")
 
 [node name="Down" type="Label" parent="DownKey"]
+layout_mode = 0
 offset_left = 41.6665
 offset_top = 18.1818
 offset_right = 60.6665
