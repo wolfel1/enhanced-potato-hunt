@@ -49,6 +49,58 @@ text = "0 Potatoes in 00:00:000"
 horizontal_alignment = 1
 metadata/_edit_group_ = true
 
+[node name="StartButton" type="Button" parent="." groups=["Start"]]
+offset_left = 400.5
+offset_top = 207.0
+offset_right = 558.5
+offset_bottom = 303.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 64
+text = "Start"
+metadata/_edit_group_ = true
+
+[node name="InstructionsButton" type="Button" parent="." groups=["Start"]]
+offset_left = 353.5
+offset_top = 307.0
+offset_right = 606.5
+offset_bottom = 373.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 42
+text = "Instructions"
+metadata/_edit_group_ = true
+
+[node name="CreditsButton" type="Button" parent="." groups=["Start"]]
+offset_left = 403.5
+offset_top = 377.0
+offset_right = 555.5
+offset_bottom = 443.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 42
+text = "Credits"
+metadata/_edit_group_ = true
+
+[node name="QuitButton" type="Button" parent="." groups=["Start"]]
+offset_left = 431.5
+offset_top = 447.0
+offset_right = 528.5
+offset_bottom = 513.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 42
+text = "Quit"
+metadata/_edit_group_ = true
+
 [node name="Instructions" parent="." instance=ExtResource("2_fk300")]
 visible = false
 
@@ -89,54 +141,8 @@ text = "Back"
 [node name="ButtonAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_8j70s")
 
-[node name="StartControls" type="VBoxContainer" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -126.5
-offset_top = -153.0
-offset_right = 126.5
-offset_bottom = 153.0
-grow_horizontal = 2
-grow_vertical = 2
-alignment = 1
-
-[node name="StartButton" type="Button" parent="StartControls" groups=["Start"]]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_font_sizes/font_size = 64
-text = "Start"
-metadata/_edit_group_ = true
-
-[node name="InstructionsButton" type="Button" parent="StartControls" groups=["Start"]]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 8
-theme_override_font_sizes/font_size = 42
-text = "Instructions"
-metadata/_edit_group_ = true
-
-[node name="CreditsButton" type="Button" parent="StartControls" groups=["Start"]]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 8
-theme_override_font_sizes/font_size = 42
-text = "Credits"
-metadata/_edit_group_ = true
-
-[node name="QuitButton" type="Button" parent="StartControls" groups=["Start"]]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 8
-theme_override_font_sizes/font_size = 42
-text = "Quit"
-metadata/_edit_group_ = true
-
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="InstructionsButton" to="." method="_on_instructions_button_pressed"]
+[connection signal="pressed" from="CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
-[connection signal="pressed" from="StartControls/StartButton" to="." method="_on_start_button_pressed"]
-[connection signal="pressed" from="StartControls/InstructionsButton" to="." method="_on_instructions_button_pressed"]
-[connection signal="pressed" from="StartControls/CreditsButton" to="." method="_on_credits_button_pressed"]
-[connection signal="pressed" from="StartControls/QuitButton" to="." method="_on_quit_button_pressed"]
