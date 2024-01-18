@@ -119,10 +119,11 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 32
 text = "Sound and some art:
-Kenney
+Kenney.nl
 
 Music:
-Kevin MacLeod"
+'Burning Trapezoid of Fire' 
+by Kevin MacLeod"
 horizontal_alignment = 1
 
 [node name="BackButton" type="Button" parent="."]
